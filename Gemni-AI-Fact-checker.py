@@ -198,12 +198,15 @@ def main():
         st.subheader("Next steps")
         st.markdown(
             """
-- For higher reliability, we can combine Gemini recommendations with a web-search / fact-check API (e.g., Google Fact Check Tools, NewsGuard, or a search engine API), compare results and select the best of the best.
-- Experiment with different prompt styles, max claims, and thinking budget.
-- This prototype uses local-only Gemini calls. If your Gemini configuration has web access, it may be able to verify more claims.
+- Integrate Google Fact Check Tools API for stronger proof validation.
+- Add search engine cross-referencing (e.g., SerpAPI, NewsGuard) for better sourcing.
+- Save results to a database for auditing, analysis and learning.
+- Provide export capabilities (CSV / PDF report).
+
 """
         )
 
 
 if __name__ == "__main__":
     main()
+

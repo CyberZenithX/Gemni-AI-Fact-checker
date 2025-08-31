@@ -1,6 +1,6 @@
 # Fake News Detector AI — Streamlit + Gemini
 
-This is a **Streamlit web application** utilizing **Google's Gemini API** to perform **fact-checking on news stories, social media posts, and assertions**. It separates factual claims from a document, verifies them with Gemini, and receives back a structured judgment with confidence values, justification, and (where applicable) evidence citations.
+This is a **Streamlit web application** utilizing **Google's Gemini API** to perform **fact-checking on news stories, social media posts, and assertions**. It separates factual claims from a document, verifies them with Gemini, and receives back a structured judgment with confidence values, justification, and evidence citations.
 
 The goal is to provide a **local, rapid prototype** of an AI-driven fake news classifier with a simple, user-friendly UI.
 
@@ -31,19 +31,19 @@ git clone https://github.com/CyberZenithX/Gemni-AI-Fact-checker.git
 cd Gemni-AI-Fact-checker
 
 # Install dependencies
-pip install streamlit google-genai pydantic
-```
+pip install streamlit google-genai pydantic serpapi beautifulsoup4 requests```
 
 ### Environment Setup
-Set your Gemini API key as an environment variable:
+Set your Gemini API key as an environment variable (Optional):
 ```bash
 export GEMINI_API_KEY="your_api_key_here"
+export SERPAPI_API_KEY="your_serpapi_key"
 ```
 Or, copy and paste the key directly into the **Streamlit sidebar** when running.
 
 ### Run the App
 ```bash
-streamlit run AI-Fact-Checker.py
+streamlit run AI-fact-checker.py
 ```
 
 ---
@@ -59,16 +59,16 @@ streamlit run AI-Fact-Checker.py
 ---
 
 ## ⚠️ Limitations & Caveats
-- Gemini may **not always have access to real-time web**. Temporally sensitive or obscure claims may be flagged **UNVERIFIED**.
+- The tool may **not always have access to real-time web**. Temporally sensitive or obscure claims may be flagged **UNVERIFIED**. (This depends on Serp
 - Don't rely exclusively on AI decisions when making critical decisions. Always cross-check with **independent fact-checking agencies**.
 - URLs provided can be partial when Gemini cannot find credible evidence.
 
 ---
 
 ## Future Roadmap
+- [x] Add **search engine cross-referencing** (e.g., SerpAPI or NewsGuard) for better sourcing.
 - [ ] Integrate **Google Fact Check Tools API** for stronger proof validation.
-- [ ] Add **search engine cross-referencing** (e.g., SerpAPI, NewsGuard) for better sourcing.
-- [ ] Save results to a database for auditing, analysis and learning.
+- [ ] Save results to a database for auditing, analysis and machine learning.
 - [ ] Provide export capabilities (CSV / PDF report).
 
 ---
@@ -85,4 +85,4 @@ This project is provided as-is under the MIT License.
 
 ---
 
-**Summary**: This project is a **prototype AI fact-checking assistant** that combines Gemini’s reasoning power with a simple Streamlit UI to provide quick and interpretable fake news detection.
+**Summary**: This project is a **prototype AI fact-checking assistant** that combines Gemini’s reasoning and SerpAPI's searching power with a simple Streamlit UI to provide quick and interpretable fake news detection.

@@ -30,9 +30,13 @@ The goal is to provide a **local, rapid prototype** of an AI-driven fake news cl
 # Clone repo (if using git)
 git clone https://github.com/CyberZenithX/Gemni-AI-Fact-checker.git
 cd Gemni-AI-Fact-checker
+```
 
 # Install dependencies
-pip install streamlit google-genai pydantic serpapi beautifulsoup4 requests```
+```bash
+pip install streamlit google-genai pydantic serpapi beautifulsoup4 requests
+```
+
 
 ### Environment Setup
 Set your Gemini API key as an environment variable (Optional):

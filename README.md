@@ -23,6 +23,7 @@ The goal is to provide a **local, rapid prototype** of an AI-driven fake news cl
 ### Prerequisites
 - Python 3.9+
 - A **Gemini API Key** from Google AI Studio (It's free)
+- A **SerpAPI Key** from SerpAPI Dashboard (250 searches/month for free)
 
 ### Installation
 ```bash
@@ -59,9 +60,9 @@ streamlit run AI-fact-checker.py
 ---
 
 ## ⚠️ Limitations & Caveats
-- The tool may **not always have access to real-time web**. Temporally sensitive or obscure claims may be flagged **UNVERIFIED**. (This depends on Serp
+- The tool may **not always have access to real-time web**. Temporally sensitive or obscure claims may be flagged **UNVERIFIED**. (This depends on SerpAPI)
 - Don't rely exclusively on AI decisions when making critical decisions. Always cross-check with **independent fact-checking agencies**.
-- URLs provided can be partial when Gemini cannot find credible evidence.
+- URLs provided can be partial when Gemini cannot find credible evidence. (Under further development)
 
 ---
 
@@ -80,6 +81,7 @@ This project is provided as-is under the MIT License.
 
 ## Acknowledgments
 - [Google Gemini API](https://ai.google.dev)
+- [SerpAPI](https://serpapi.com)
 - [Streamlit](https://streamlit.io)
 - Fact-checking organizations like PolitiFact, Snopes, and Full Fact, whose practices inspired the structure of this tool.
 
